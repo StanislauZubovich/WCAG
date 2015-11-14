@@ -5,7 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=792, user-scalable=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+	<link rel="stylesheet" href="shower/themes/bright/styles/screen.css">
+	<link rel="stylesheet" href="index.css">
 </head>
 <body class="list">
 	<header class="caption">
@@ -13,13 +14,356 @@
 		<h1 style="font-size: 35px"> или WCAG 2.0 для людей</h1>
 		<p>Станислав Зубович, EPAM</p>
 	</header>
-	<section class="slide cover" id="Cover"><div>
-		<h2>Shower Presentation Engine</h2>
-		<img src="pictures/cover.jpg" alt="">
-	</div></section>
+	<section class="slide cover shout" id="Cover"><div>
+		<h2>WCAG 2.0 или Вся боль доступного Веба</h2>
+		</div></section>
+
 	<section class="slide"><div>
+		<h2>Web Accessibility</h2>
+		<ul>
+			<li class="next">When sites are correctly <b>designed</b>, <b>developed</b> and <b>edited</b>, all users have <b>equal access</b> to information and functionality. Wikipedia</li>
+			<li class="next">Able to be <b>easily</b> obtained or used. Oxford Dictionary</li>
+			<li class="next">Accessibility ~ Usability</li>
+			<li class="next">All poeple can use application</li>
+		</ul>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Web Accessibility in numbers</h2>
+		<table style="margin:0 25% 0 15%; width: 60%">
+			<thead>
+				<tr>
+					<td>Group</td>
+					<td>Population</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Vision Problems</td>
+					<td>3-10%</td>
+				</tr>
+				<tr>
+					<td>Colorblindness</td>
+					<td>4-8%</td>
+				</tr>
+				<tr>
+					<td>Physical Functioning</td>
+					<td>8%</td>
+				</tr>
+				<tr>
+					<td>Cognitive Diﬃculty</td>
+					<td>6%</td>
+				</tr>
+				<tr>
+					<td>Hearing Diﬃculty</td>
+					<td>6%</td>
+				</tr>
+			</tbody>
+		</table>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Any tools to help us?</h2>
+		<ul>
+			<li>Screen Readers</li>
+			<li>Screen magnifiers</li>
+			<li>Keyboard-only</li>
+			<li>Braille display</li>
+			<li>Bumped font size</li>
+		</ul>
+		</div></section>
 		
-	</div></section>
+	<section class="slide"><div>
+		<h2>WCAG</h2>
+		<ul>
+			<li><a href="http://www.w3.org/TR/WCAG20/">The standard</a></li>
+			<li><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/">Understanding WCAG</a></li>
+			<li><a href="http://www.w3.org/TR/WCAG20-TECHS/">Techniques</a></li>
+			<li><a href="http://www.w3.org/WAI/WCAG20/quickref/">Quick Reference</a></li>
+			<li><a href="http://www.w3.org/WAI/WCAG20/wcag2faq.html">FAQ</a></li>
+		</ul>
+		</div></section>
+
+	<section class="slide cover shout centered_shout"><div>
+		<h2 style="margin-top:-110px">Accessibility</h2>
+		<h2>!==</h2>
+		<h2 style="margin-top:110px">Checklist</h2>
+		</div></section>
+
+	<section class="slide cover shout"><div>
+		<h2>Starting out</h2>
+		<h2 class="shout_h2_small">Early Access</h2>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>First Steps</h2>
+		<ul>
+			<li>Your page is still functional keyboard-only</li>
+			<li>Fallback for visual information</li>
+			<li>Well-functioning forms</li>
+		</ul>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Keyboard strategy</h2>
+		<ul>
+			<li>obvious focus states</li>
+		</ul>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Don't</h2>
+		<pre>
+			<code>a, a:focus {</code>
+			<code>	<mark>outline: none;</mark></code>
+			<code>	<mark>outline: 0;</mark></code>
+			<code>}</code>
+		</pre>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Keyboard strategy</h2>
+		<ul>
+			<li>obvious focus states <b>(keep this outline)</b></li>
+			<li>fallback for :hover &amp; click (:focus &amp; keydown)</li>
+			<li>add tabIndex=0 &amp; key events to non-focusable elements</li>
+			<li>avoid keyboard traps &amp; time wasting</li>
+			<li>HTML can help! And even for FREE!</li>
+		</ul>
+		</div></section>
+
+	<section class="slide code_88"><div>
+		<h2>Wanted: Free Events!</h2>
+		<ul>
+			<li><code>&lt;span class="btn toggle"&gt;Click to Toggle&lt;/span&gt;</code></li>
+		</ul>
+		</div></section>
+
+	<section class="slide code_88"><div>
+		<h2>Wanted: Free Events!</h2>
+		<ul>
+			<li><s><code>&lt;span class="btn toggle"&gt;Click to Toggle&lt;/span&gt;</code></s></li>
+			<li class="next"><code>&lt;a href="#" class="btn toggle"&gt;Click to Toggle&lt;/a&gt;</code></li>
+		</ul>
+		</div></section>
+
+	<section class="slide code_88"><div>
+		<h2>Wanted: Free Events!</h2>
+		<ul>
+			<li><s><code>&lt;span class="btn toggle"&gt;Click to Toggle&lt;/span&gt;</code></s></li>
+			<li><s><code>&lt;a href="#" class="btn toggle"&gt;Click to Toggle&lt;/a&gt;</code></s></li>
+			<li class="next"><code>&lt;button type="button" class="toggle"&gt;Click to Toggle&lt;/ button&gt;</code></li>
+		</ul>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Visual Considerations</h2>
+		<ul>
+			<li>
+				start with a good font size &amp; high contrast
+				<ul style="font-size:75%">
+					<li><a href="http://mzl.la/1eeYiyf">WCAG Contrast Checker</a></li>
+					<li><a href="http://bit.ly/1eeYZYh">Contrast Checker</a></li>
+					<li><a href="http://bit.ly/1ljQvFF">NoCoﬀee</a></li>
+				</ul>
+			</li>
+			<li class="next">don’t rely on color alone</li>
+			<li class="next">add legends and texture or symbols</li>
+		</ul>
+		</div></section>
+
+	<section class="slide cover"><div>
+		<img src="pictures/piechart.jpg" alt="">
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Visual Considerations</h2>
+		<ul>
+			<li>
+				start with a good font size &amp; high contrast
+				<ul style="font-size:75%">
+					<li><a href="http://mzl.la/1eeYiyf">WCAG Contrast Checker</a></li>
+					<li><a href="http://bit.ly/1eeYZYh">Contrast Checker</a></li>
+					<li><a href="http://bit.ly/1ljQvFF">NoCoﬀee</a></li>
+				</ul>
+			</li>
+			<li>don’t rely on color alone</li>
+			<li>add legends and texture or symbols</li>
+			<li>add legends and texture or symbols all images have a meaningful alt attribute</li>
+		</ul>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Froms</h2>
+		<ul>
+			<li>Every form ﬁeld includes a real label <br><code>&lt;label for="[INPUT ID]"&gt;</code></li>
+			<li class="next">Labels can include help, required, error text</li>
+			<li class="next">Provide meaningful message on form error</li>
+		</ul>
+		</div></section>
+
+	<section class="slide cover"><div>
+		<img src="pictures/ebay_form.png" alt="">
+		</div></section>
+
+	<section class="slide cover shout"><div>
+		<h2>We need help</h2>
+		</div></section>
+
+	<section class="slide cover"><div>
+		<img src="pictures/readers.jpg" alt="">
+		</div></section>
+
+	<section class="slide cover"><div>
+		<h2>How does it works?</h2>
+		<ul>
+			<li>Get the source</li>
+			<li class="next">Announce sweet generated HTML in source order</li>
+		</ul>
+		<img src="pictures/blank.jpg" alt="">
+		<img src="pictures/reader_html.jpg" alt="" class="next">
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Screen Reader benefits</h2>
+		<ul>
+			<li>Use keyboard to navigate and ﬁnd content</li>
+			<li>98.6% of screen reader users have JS enabled!</li>
+			<li>Highly customizable</li>
+		</ul>
+		</div></section>
+
+	<section class="slide cover shout"><div>
+		<h2>HTML Counts</h2>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Headings</h2>
+		<ul>
+			<li>Main way screen reader users navigate</li>
+			<li>Do your main content areas have headings?</li>
+			<li>Are they descriptive?</li>
+			<li>Do they follow a hierarchy? (h1 >> h6)</li>
+		</ul>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Reader ignores</h2>
+		<ul>
+			<li>img with empty alt attribute alt=""</li>
+			<li>display: none;</li>
+			<li>visibility: hidden;</li>
+			<li>:before content, :after content (sort of)</li>
+			<li>keep in mind for icons and icon fonts!</li>
+		</ul>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Reader  won't ignore</h2>
+		<ul>
+			<li>content “hidden” with opacity, z-index, height</li>
+			<li>oﬀ-screen positioning (text-indent, top, left)</li>
+			<li>CSS clipping</li>
+		</ul>
+		</div></section>
+
+	<section class="slide"><div>
+		<pre>
+			<code>.wcag-hidden {</code>
+			<code>	border: 0;</code>
+			<code>	clip: rect(0 0 0 0);</code>
+			<code>	height: 1px;</code>
+			<code>	margin: -1px;</code>
+			<code>	padding: 0;</code>
+			<code>	position: absolute;</code>
+			<code>	width: 1px;</code>
+			<code>}</code>
+		</pre>
+		</div></section>
+
+	<section class="slide cover shout"><div>
+		<h2 class="shout_h2_big_2lines">Beyond the basics</h2>
+		<h2 class="shout_h2_small">There’s gotta be more, right?</h2>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>ARIA</h2>
+		<ul>
+			<li>Semantic information and better interactions for screen readers</li>
+			<li>Applied directly to HTML</li>
+			<li>Part of HTML5 spec</li>
+			<li>Roles, states &amp; properties</li>
+			<li>Does not aﬀect styles or non-SR behavior</li>
+		</ul>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Roles</h2>
+		<ul>
+			<li>Create new semantic meaning for elements via “role-” attribute</li>
+			<li>Once set, they don’t change</li>
+			<li><code>&lt;nav role="navigation"&gt;</code></li>
+			<li><code>&lt;article role="article"&gt;</code></li>
+			<li><code>&lt;div role="tablist"&gt;</code></li>
+			<li><code>&lt;div role="combobox&gt;</code></li>
+		</ul>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Widget Roles</h2>
+		<ul>
+			<li>Semantic meaning to your custom components</li>
+			<li>tooltip</li>
+			<li>slider</li>
+			<li>dialog</li>
+			<li>tab</li>
+			<li>menu</li>
+			<li>alert</li>
+			<li>and many more!</li>
+		</ul>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>States &amp; Properties</h2>
+		<ul>
+			<li>Describe relationships - between content &amp; between user interactions</li>
+			<li>updated via JS on UI changes</li>
+			<li>attribute starts with “aria-” preﬁx</li>
+			<li><code>&lt;section aria-labelledby="MainHeading"&gt;</code></li>
+			<li><code>&lt;div aria-expanded="true"&gt;</code></li>
+			<li>etc.</li>
+		</ul>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Content Relationships</h2>
+		<ul>
+			<li>Semantically link labels to content or add them when missing</li>
+			<li>aria-labelledby, aria-label</li>
+		</ul>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Using ARIA Wisely</h2>
+		<ul>
+			<li>ARIA is a bridge, not a replacement.</li>
+			<li>USE plain HTML if you can</li>
+			<li>Not magic and makes no promises</li>
+			<li>Events, focus management, keyboard support, and meaningful structure is still up to you</li>
+			<li>Only way to know for sure... TEST</li>
+		</ul>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>What we’ve learned</h2>
+		<ul>
+			<li>Bake it in, don’t tack it on</li>
+			<li>Awesome and helpful community</li>
+			<li>You may ﬁnd it hard to stop...</li>
+		</ul>
+		</div></section>
+		
+		
 	<p class="badge"><a href="https://github.com/shower/shower">Powered by Shower</a></p>
 	<div class="progress"><div></div></div>
 	<script src="shower/shower.min.js"></script>

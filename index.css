@@ -1,0 +1,22 @@
+.centered_shout h2{
+	text-align: center;
+}
+
+.slide.shout .shout_h2_small {
+	font-size: 30px;
+	top: 63%;
+}
+.slide.shout .shout_h2_big_2lines {
+	font-size: 90px;
+}
+
+/*
+.slide.shout .shout_h2_big_2lines + .shout_h2_small {
+	font-size: 30px;
+	top: 63%;
+}
+*/
+
+.slide.code_88 code {
+	font-size: 88%;
+}
