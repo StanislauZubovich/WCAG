@@ -19,43 +19,43 @@
 		</div></section>
 
 	<section class="slide"><div>
-		<h2>Web Accessibility</h2>
+		<h2>Доступность</h2>
 		<ul>
-			<li class="next">When sites are correctly <b>designed</b>, <b>developed</b> and <b>edited</b>, all users have <b>equal access</b> to information and functionality. Wikipedia</li>
+			<li class="next">Если сайты правильно <b>спроектированы</b>, <b>разработаны</b> и <b>отредактированы</b>, все пользователи имеют <b>равный доступ</b> к информации и функционалу. Wikipedia</li>
 			<li class="next">Able to be <b>easily</b> obtained or used. Oxford Dictionary</li>
-			<li class="next">Accessibility ~ Usability</li>
-			<li class="next">All poeple can use application</li>
+			<li class="next">Доступность ~ Юзабилити</li>
+			<li class="next">Все пользователи могут использовать приложение, и оно должно быть простым в использовании для всех пользователей</li>
 		</ul>
 		</div></section>
 
 	<section class="slide"><div>
-		<h2>Web Accessibility in numbers</h2>
-		<table style="margin:0 25% 0 15%; width: 60%">
+		<h2>Доступность в числах</h2>
+		<table>
 			<thead>
 				<tr>
-					<td>Group</td>
-					<td>Population</td>
+					<td>Группа</td>
+					<td>Процентное соотношение</td>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td>Vision Problems</td>
+					<td>Нарушения зрения</td>
 					<td>3-10%</td>
 				</tr>
 				<tr>
-					<td>Colorblindness</td>
+					<td>Нарушения цветоразличения</td>
 					<td>4-8%</td>
 				</tr>
 				<tr>
-					<td>Physical Functioning</td>
+					<td>Нарушения ОДА</td>
 					<td>8%</td>
 				</tr>
 				<tr>
-					<td>Cognitive Diﬃculty</td>
+					<td>Нарушения ментальной сферы</td>
 					<td>6%</td>
 				</tr>
 				<tr>
-					<td>Hearing Diﬃculty</td>
+					<td>Нарушения слехаy</td>
 					<td>6%</td>
 				</tr>
 			</tbody>
@@ -63,13 +63,13 @@
 		</div></section>
 
 	<section class="slide"><div>
-		<h2>Any tools to help us?</h2>
+		<h2>Чем мы можем помочь?</h2>
 		<ul>
 			<li>Screen Readers</li>
 			<li>Screen magnifiers</li>
 			<li>Keyboard-only</li>
-			<li>Braille display</li>
-			<li>Bumped font size</li>
+			<li>Брайлевские дисплеи</li>
+			<li>Увеличенный размер шрифтов</li>
 		</ul>
 		</div></section>
 		
@@ -85,34 +85,34 @@
 		</div></section>
 
 	<section class="slide cover shout centered_shout"><div>
-		<h2 style="margin-top:-110px">Accessibility</h2>
+		<h2 style="margin-top:-110px">Доступность</h2>
 		<h2>!==</h2>
 		<h2 style="margin-top:110px">Checklist</h2>
 		</div></section>
 
 	<section class="slide cover shout"><div>
-		<h2>Starting out</h2>
+		<h2>Начнемс</h2>
 		<h2 class="shout_h2_small">Early Access</h2>
 		</div></section>
 
 	<section class="slide"><div>
-		<h2>First Steps</h2>
+		<h2>Первые шаги</h2>
 		<ul>
-			<li>Your page is still functional keyboard-only</li>
-			<li>Fallback for visual information</li>
-			<li>Well-functioning forms</li>
+			<li>Ваше пролиджение должно сохранять функциональность keyboard-only</li>
+			<li>Оставьте fallback для визуальной информации</li>
+			<li>Формы должны работать без нареканий</li>
 		</ul>
 		</div></section>
 
 	<section class="slide"><div>
-		<h2>Keyboard strategy</h2>
+		<h2>Keyboard-only план</h2>
 		<ul>
-			<li>obvious focus states</li>
+			<li>Очевидные focus состояния</li>
 		</ul>
 		</div></section>
 
 	<section class="slide"><div>
-		<h2>Don't</h2>
+		<h2>Скажем НЕТЪ!</h2>
 		<pre>
 			<code>a, a:focus {</code>
 			<code>	<mark>outline: none;</mark></code>
@@ -122,13 +122,13 @@
 		</div></section>
 
 	<section class="slide"><div>
-		<h2>Keyboard strategy</h2>
+		<h2>Keyboard-only план</h2>
 		<ul>
-			<li>obvious focus states <b>(keep this outline)</b></li>
-			<li>fallback for :hover &amp; click (:focus &amp; keydown)</li>
-			<li>add tabIndex=0 &amp; key events to non-focusable elements</li>
-			<li>avoid keyboard traps &amp; time wasting</li>
-			<li>HTML can help! And even for FREE!</li>
+			<li>Очевидные focus состояния <b>(Оставьте outline в покое)</b></li>
+			<li>Fallback для :hover &amp; click (:focus &amp; keydown)</li>
+			<li>Добавьте tabIndex=0 &amp; key events для non-focusable элементов</li>
+			<li>Избегайте keyboard-traps &amp; time-wasting</li>
+			<li>HTML вам поможет! И абсолютно бесплатно!</li>
 		</ul>
 		</div></section>
 
@@ -157,18 +157,18 @@
 		</div></section>
 
 	<section class="slide"><div>
-		<h2>Visual Considerations</h2>
+		<h2>Визуальная часть</h2>
 		<ul>
 			<li>
-				start with a good font size &amp; high contrast
+				Начнем с хороших размеров шрифтов &amp; адекватного контраста
 				<ul style="font-size:75%">
 					<li><a href="http://mzl.la/1eeYiyf">WCAG Contrast Checker</a></li>
 					<li><a href="http://bit.ly/1eeYZYh">Contrast Checker</a></li>
 					<li><a href="http://bit.ly/1ljQvFF">NoCoﬀee</a></li>
 				</ul>
 			</li>
-			<li class="next">don’t rely on color alone</li>
-			<li class="next">add legends and texture or symbols</li>
+			<li class="next">Не полагайтесь только на цвет</li>
+			<li class="next">Добавьте легенду и текстуру или символы</li>
 		</ul>
 		</div></section>
 
@@ -177,28 +177,28 @@
 		</div></section>
 
 	<section class="slide"><div>
-		<h2>Visual Considerations</h2>
+		<h2>Визуальная часть</h2>
 		<ul>
 			<li>
-				start with a good font size &amp; high contrast
+				Начнем с хороших размеров шрифтов &amp; адекватного контраста
 				<ul style="font-size:75%">
 					<li><a href="http://mzl.la/1eeYiyf">WCAG Contrast Checker</a></li>
 					<li><a href="http://bit.ly/1eeYZYh">Contrast Checker</a></li>
 					<li><a href="http://bit.ly/1ljQvFF">NoCoﬀee</a></li>
 				</ul>
 			</li>
-			<li>don’t rely on color alone</li>
-			<li>add legends and texture or symbols</li>
-			<li>add legends and texture or symbols all images have a meaningful alt attribute</li>
+			<li>Не полагайтесь только на цвет</li>
+			<li>Добавьте легенду и текстуру или символы</li>
+			<li class="next">Все изображения должны иметь со alt смысломом</li>
 		</ul>
 		</div></section>
 
 	<section class="slide"><div>
-		<h2>Froms</h2>
+		<h2>Формы</h2>
 		<ul>
-			<li>Every form ﬁeld includes a real label <br><code>&lt;label for="[INPUT ID]"&gt;</code></li>
+			<li>Каждоая поле включает в себя реальный label <br><code>&lt;label for="[INPUT ID]"&gt;</code></li>
 			<li class="next">Labels can include help, required, error text</li>
-			<li class="next">Provide meaningful message on form error</li>
+			<li class="next">Обеспечьте адекватные сообщения на ошибки</li>
 		</ul>
 		</div></section>
 
@@ -207,7 +207,7 @@
 		</div></section>
 
 	<section class="slide cover shout"><div>
-		<h2>We need help</h2>
+		<h2>нам нужна помощь?</h2>
 		</div></section>
 
 	<section class="slide cover"><div>
@@ -215,54 +215,54 @@
 		</div></section>
 
 	<section class="slide cover"><div>
-		<h2>How does it works?</h2>
+		<h2>Как работают Screen Readers?</h2>
 		<ul>
-			<li>Get the source</li>
-			<li class="next">Announce sweet generated HTML in source order</li>
+			<li>Забираем исходник</li>
+			<li class="next">Получаем приятный сгенерированный HTML в "как в исходнике"</li>
 		</ul>
 		<img src="pictures/blank.jpg" alt="">
 		<img src="pictures/reader_html.jpg" alt="" class="next">
 		</div></section>
 
 	<section class="slide"><div>
-		<h2>Screen Reader benefits</h2>
+		<h2>Screen Readers - польза использования</h2>
 		<ul>
-			<li>Use keyboard to navigate and ﬁnd content</li>
-			<li>98.6% of screen reader users have JS enabled!</li>
-			<li>Highly customizable</li>
+			<li>Используйте клавиатуру для навигации и поиска поконтенту</li>
+			<li>98.6% пользователей screen reader'ов users не выключают JS!</li>
+			<li>Приличные возможности по кастомизации</li>
 		</ul>
 		</div></section>
 
 	<section class="slide cover shout"><div>
-		<h2>HTML Counts</h2>
+		<h2>HTML Считается</h2>
 		</div></section>
 
 	<section class="slide"><div>
 		<h2>Headings</h2>
 		<ul>
-			<li>Main way screen reader users navigate</li>
-			<li>Do your main content areas have headings?</li>
-			<li>Are they descriptive?</li>
-			<li>Do they follow a hierarchy? (h1 >> h6)</li>
+			<li>Основная способ навигации пользователей screen reader'ов</li>
+			<li class="next">Do your main content areas have headings?</li>
+			<li class="next">Are they descriptive?</li>
+			<li class="next">Они следуют иерархии? (h1 >> h6)</li>
 		</ul>
 		</div></section>
 
 	<section class="slide"><div>
-		<h2>Reader ignores</h2>
+		<h2>Screen Reader игнорирует</h2>
 		<ul>
-			<li>img with empty alt attribute alt=""</li>
+			<li>img с пустыми alt аттрибутами alt=""</li>
 			<li>display: none;</li>
 			<li>visibility: hidden;</li>
-			<li>:before content, :after content (sort of)</li>
-			<li>keep in mind for icons and icon fonts!</li>
+			<li>:before content, :after content (тип того)</li>
+			<li>Дуржите в голове иконки и иконочные шрифты!</li>
 		</ul>
 		</div></section>
 
 	<section class="slide"><div>
-		<h2>Reader  won't ignore</h2>
+		<h2>Screen Reader не забудет</h2>
 		<ul>
-			<li>content “hidden” with opacity, z-index, height</li>
-			<li>oﬀ-screen positioning (text-indent, top, left)</li>
+			<li>Спрятанный контент через opacity, z-index, height</li>
+			<li>oﬀ-screen позиционирование (text-indent, top, left)</li>
 			<li>CSS clipping</li>
 		</ul>
 		</div></section>
@@ -282,25 +282,25 @@
 		</div></section>
 
 	<section class="slide cover shout"><div>
-		<h2 class="shout_h2_big_2lines">Beyond the basics</h2>
-		<h2 class="shout_h2_small">There’s gotta be more, right?</h2>
+		<h2 class="shout_h2_big_2lines">За границами банального</h2>
+		<h2 class="shout_h2_small">Должно же быть что-то еще, да?</h2>
 		</div></section>
 
 	<section class="slide"><div>
 		<h2>ARIA</h2>
 		<ul>
-			<li>Semantic information and better interactions for screen readers</li>
-			<li>Applied directly to HTML</li>
-			<li>Part of HTML5 spec</li>
+			<li>Семантическая информация и лучшее взаимодействие со Screen Reader'ами</li>
+			<li>Пишем прямо в HTML</li>
+			<li>Часть спецификации HTML5</li>
 			<li>Roles, states &amp; properties</li>
-			<li>Does not aﬀect styles or non-SR behavior</li>
+			<li>Не аффектает стили для "нормального" поведения</li>
 		</ul>
 		</div></section>
 
 	<section class="slide"><div>
 		<h2>Roles</h2>
 		<ul>
-			<li>Create new semantic meaning for elements via “role-” attribute</li>
+			<li>Создать новый семантический смысл элементов используя “role-” аттрибуты</li>
 			<li>Once set, they don’t change</li>
 			<li><code>&lt;nav role="navigation"&gt;</code></li>
 			<li><code>&lt;article role="article"&gt;</code></li>
@@ -312,45 +312,45 @@
 	<section class="slide"><div>
 		<h2>Widget Roles</h2>
 		<ul>
-			<li>Semantic meaning to your custom components</li>
+			<li>Семантический смысл для ваших кастомных компонентов</li>
 			<li>tooltip</li>
 			<li>slider</li>
 			<li>dialog</li>
 			<li>tab</li>
 			<li>menu</li>
 			<li>alert</li>
-			<li>and many more!</li>
+			<li>and много чего еще!</li>
 		</ul>
 		</div></section>
 
 	<section class="slide"><div>
 		<h2>States &amp; Properties</h2>
 		<ul>
-			<li>Describe relationships - between content &amp; between user interactions</li>
-			<li>updated via JS on UI changes</li>
-			<li>attribute starts with “aria-” preﬁx</li>
+			<li>Описывают отношения - между контентом и взаимодеййствием с пользователем</li>
+			<li>Updated via JS on UI changes</li>
+			<li>aria-аттрибуты</li>
 			<li><code>&lt;section aria-labelledby="MainHeading"&gt;</code></li>
 			<li><code>&lt;div aria-expanded="true"&gt;</code></li>
-			<li>etc.</li>
+			<li>и т.д.</li>
 		</ul>
 		</div></section>
 
 	<section class="slide"><div>
 		<h2>Content Relationships</h2>
 		<ul>
-			<li>Semantically link labels to content or add them when missing</li>
+			<li>Семантически залинкуйте label наконтент или добавьте, если их не было</li>
 			<li>aria-labelledby, aria-label</li>
 		</ul>
 		</div></section>
 
 	<section class="slide"><div>
-		<h2>Using ARIA Wisely</h2>
+		<h2>Используйте ARIA аккуратно</h2>
 		<ul>
-			<li>ARIA is a bridge, not a replacement.</li>
-			<li>USE plain HTML if you can</li>
-			<li>Not magic and makes no promises</li>
-			<li>Events, focus management, keyboard support, and meaningful structure is still up to you</li>
-			<li>Only way to know for sure... TEST</li>
+			<li>ARIA это мост, а не замена.</li>
+			<li>Используйте простой HTML так, где это возможно</li>
+			<li>Это не магия и не панацея</li>
+			<li>Ответственность за events, focus management, keyboard support, and смысл всё еще лежит на вас</li>
+			<li>Есть только один способ быть на 10% уеренным... Потестить</li>
 		</ul>
 		</div></section>
 
