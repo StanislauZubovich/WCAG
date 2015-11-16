@@ -1,10 +1,20 @@
-.centered_shout h2{
-	text-align: center;
+#Cover h2 {
+    color: #fff;
+    top: 66%;
+}
+
+.slide.column5_shout h2 {
+    font-size: 90px;
+}
+
+.slide small {
+    font-size: 80%;
+    
 }
 
 .slide.shout .shout_h2_small {
 	font-size: 30px;
-	top: 73%;
+	top: 70%;
 }
 .slide.shout .shout_h2_big_2lines {
 	font-size: 90px;
@@ -19,4 +29,18 @@
 
 .slide.code_88 code {
 	font-size: 88%;
+}
+
+.slide .adv LI:before {
+    content: '';
+    width: 2em;
+    height: 1em;
+    background-size: auto 100%;
+    background-repeat: no-repeat;    
+}
+.slide .adv LI.yes:before {
+    background-image: url(../pictures/yes.svg);
+}
+.slide .adv LI.no:before {
+    background-image: url(../pictures/no.svg);
 }
