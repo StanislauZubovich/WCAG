@@ -19,12 +19,8 @@
 		<img src="pictures/6999547-dc-comics-art.jpg" alt="">
 		</div></section>
 
-	<section class="slide cover shout column5_shout"><div>
-		<h2 style="margin-top:-160px">WCAG 2.0</h2>
-		<h2 style="margin-top:-85px">==</h2>
-		<h2>Accessibility</h2>
-		<h2 style="margin-top:80px">==</h2>
-		<h2 style="margin-top:160px">#A11Y</h2>
+	<section class="slide shout"><div>
+		<h2>#A11Y</h2>
 		</div></section>
 
 	<section class="slide"><div>
@@ -38,14 +34,13 @@
 		</div></section>
 
 	<section class="slide"><div>
-		<h2>Кому мы помогаем?</h2>
+		<h2>Каким пользователям мы помогаем?</h2>
 		<ul>
-		    <li>Незрячие</li>
-		    <li>Слабовидящие</li>
-		    <li>Когнитивные расстройства</li>
-		    <li>Нарущения опорнодвигательного аппарата</li>
-            <li>Дальтонизм</li>
-            <li>Пожилые пользователи</li>
+			<li>Незрячие</li>
+			<li>Слабовидящие</li>
+			<li>Когнитивные расстройства</li>
+			<li>Нарущения опорнодвигательного аппарата</li>
+			<li>Дальтонизм</li>
 		</ul>
 		</div></section>
 
@@ -53,8 +48,12 @@
 		<h2>Кто все эти люди? О_о</h2>
 		</div></section>
 
+	<section class="slide shout"><div>
+		<h2>~20% активных пользователей</h2>
+		</div></section>
+
 	<section class="slide"><div>
-		<h2>Чем мы можем помочь?</h2>
+		<h2>User eXperience</h2>
 		<ul>
 			<li>Screen Readers</li>
 			<li>Screen magnifiers</li>
@@ -65,7 +64,7 @@
 		</div></section>
 		
 	<section class="slide"><div>
-		<h2>WCAG</h2>
+		<h2>WCAG 2.0</h2>
 		<ul>
 			<li><a href="http://www.w3.org/TR/WCAG20/">The Standard</a></li>
 			<li><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/">Understanding WCAG</a></li>
@@ -76,8 +75,20 @@
 		</div></section>
 
 	<section class="slide shout"><div>
+		<h2>Сложно!</h2>
+		</div></section>
+
+	<section class="slide shout"><div>
+		<h2><a href="http://a11yproject.com/checklist.html">Checklist?</a></h2>
+		</div></section>
+
+	<section class="slide cover shout"><div>
+		<img src="pictures/checklist.png" alt="">
+		</div></section>
+
+	<section class="slide shout"><div>
 		<h2 style="margin-top:-160px">Доступность</h2>
-		<h2>!==</h2>
+		<h2>==</h2>
 		<h2 style="margin-top:130px">Checklist</h2>
 		</div></section>
 
@@ -89,9 +100,9 @@
 	<section class="slide"><div>
 		<h2>Первые шаги</h2>
 		<ul>
-			<li>Ваш сайт должнен сохранять функциональность keyboard-only</li>
-			<li>Оставьте fallback для визуальной информации</li>
-			<li>Формы должны работать без нареканий</li>
+			<li class="next">Ваш сайт должнен уметь работать keyboard-only</li>
+			<li class="next">Оставьте fallback для визуальной информации</li>
+			<li class="next">Формы должны работать идеально</li>
 		</ul>
 		</div></section>
 
@@ -104,11 +115,13 @@
 
 	<section class="slide"><div>
 		<h2>Скажем НЕТЪ!</h2>
-		<pre>
+		<pre class="deprecated">
 			<code>a, a:focus {</code>
 			<code>	<mark>outline: none;</mark></code>
 			<code>	<mark>outline: 0;</mark></code>
 			<code>}</code>
+			<next></next>
+			<div class="cross next"></div>
 		</pre>
 		</div></section>
 
@@ -121,6 +134,10 @@
 			<li class="next">Избегайте keyboard-traps &amp; time-wasting</li>
 			<li class="next">HTML вам поможет! И абсолютно бесплатно!</li>
 		</ul>
+		</div></section>
+
+	<section class="slide shout"><div>
+		<h2>Keyboard-only пример</h2>
 		</div></section>
 
 	<section class="slide code_88"><div>
@@ -158,6 +175,26 @@
 					<li><a href="http://bit.ly/1ljQvFF">NoCoﬀee</a></li>
 				</ul>
 			</li>
+			<li class="next">И не забываем про em/rem. <span class="next">Почему?</span></li>
+		</ul>
+		</div></section>
+
+	<section class="slide cover" style="background: #fff;"><div>
+		<img src="pictures/magnifier.png" alt="">
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Визуальная часть</h2>
+		<ul>
+			<li>
+				Начнем с хороших размеров шрифтов &amp; адекватного контраста
+				<ul style="font-size:75%">
+					<li><a href="http://mzl.la/1eeYiyf">WCAG Contrast Checker</a></li>
+					<li><a href="http://bit.ly/1eeYZYh">Contrast Checker</a></li>
+					<li><a href="http://bit.ly/1ljQvFF">NoCoﬀee</a></li>
+				</ul>
+			</li>
+			<li>И не забываем про em/rem</li>
 			<li class="next">Не полагайтесь только на цвет</li>
 			<li class="next">Добавьте легенду и текстуру или символы</li>
 		</ul>
@@ -187,9 +224,9 @@
 	<section class="slide"><div>
 		<h2>Формы</h2>
 		<ul>
-			<li>Каждое поле включает в себя реальный label <br><code>&lt;label for="[INPUT ID]"&gt;</code></li>
-			<li class="next">Labels can include help, required, error text</li>
-			<li class="next">Обеспечьте адекватные сообщения на ошибки</li>
+			<li>Каждое поле должно включать в себя реальный label <br><code>&lt;label for="[INPUT ID]"&gt;</code></li>
+			<li class="next">Внутри может быть вспомогательный текст, предупреждения, ошибки</li>
+			<li class="next">Вам необходимы адекватные сообщения при ошибках</li>
 		</ul>
 		</div></section>
 
@@ -197,43 +234,44 @@
 		<img src="pictures/ebay_form.png" alt="">
 		</div></section>
 
-	<section class="slide cover shout"><div>
-		<h2>нам нужна помощь?</h2>
+	<section class="slide shout"><div>
+		<h2>Нам нужна помощь?</h2>
 		</div></section>
 
-	<section class="slide cover"><div>
+	<section class="slide shout cover"><div>
+		<h2>Try any</h2>
 		<img src="pictures/readers.jpg" alt="">
 		</div></section>
 
 	<section class="slide cover"><div>
-		<h2>Как работают Screen Readers?</h2>
+		<h2>Как работает Screen Reader?</h2>
 		<ul>
-			<li>Забираем исходник</li>
-			<li class="next">Получаем приятный сгенерированный HTML в "как в исходнике"</li>
+			<li>Забирает исходник</li>
+			<li class="next">Получаем приятный сгенерированный HTML в "как в исходнике". <br>Ну почти</li>
 		</ul>
 		<img src="pictures/blank.jpg" alt="">
 		<img src="pictures/reader_html.jpg" alt="" class="next">
 		</div></section>
 
 	<section class="slide"><div>
-		<h2>Screen Readers - польза использования</h2>
+		<h2>Screen Reader</h2>
 		<ul>
-			<li>Используйте клавиатуру для навигации и поиска поконтенту</li>
+			<li>Для навигации и поиска поконтенту используется клавиатура (шорткаты)</li>
 			<li>98.6% пользователей screen reader'ов users не выключают JS!</li>
-			<li>Приличные возможности по кастомизации</li>
+			<li>???</li>
 		</ul>
 		</div></section>
 
-	<section class="slide cover shout"><div>
-		<h2>HTML Считается</h2>
+	<section class="slide shout"><div>
+		<h2>HTML<br>Имеет значение</h2>
 		</div></section>
 
 	<section class="slide"><div>
 		<h2>Headings</h2>
 		<ul>
-			<li>Основная способ навигации пользователей screen reader'ов</li>
-			<li class="next">Do your main content areas have headings?</li>
-			<li class="next">Are they descriptive?</li>
+			<li>Один из основных способов навигации</li>
+			<li class="next">А ваш контент имеет заголовки?</li>
+			<li class="next">Они достаточно информативны?</li>
 			<li class="next">Они следуют иерархии? (h1 >> h6)</li>
 		</ul>
 		</div></section>
@@ -272,6 +310,18 @@
 		</pre>
 		</div></section>
 
+	<section class="slide"><div>
+		<pre>
+			<code>&lt;a href="#"&gt;</code>
+			<code>	&lt;span class="wcag-hidden"&gt;Next&lt;/span&gt;</code>
+			<code>&lt;/a&gt;</code>
+			<code><br></code>
+			<code>a {</code>
+			<code>	background: url(next.png);</code>
+			<code>}</code>
+		</pre>
+		</div></section>
+
 	<section class="slide shout"><div>
 		<h2 class="shout_h2_big_2lines">За границами банального</h2>
 		<h2 class="shout_h2_small">Должно же быть что-то еще, да?</h2>
@@ -298,6 +348,40 @@
 			<li><code>&lt;div role="tablist"&gt;</code></li>
 			<li><code>&lt;div role="combobox&gt;</code></li>
 		</ul>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>HTML</h2>
+		<pre>
+			<code>&lt;span class="btn toggle"&gt;Click&lt;/span&gt;</code>
+		</pre>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Roles HTML</h2>
+		<pre>
+			<code><s>&lt;span class="btn toggle"&gt;Click&lt;/span&gt;</s></code>
+			<code>&lt;a href="#" class="btn toggle"&gt;Click&lt;/a&gt;</code>
+		</pre>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Roles HTML</h2>
+		<pre>
+			<code><s>&lt;span class="btn toggle"&gt;Click&lt;/span&gt;</s></code>
+			<code><s>&lt;a href="#" class="btn toggle"&gt;Click&lt;/a&gt;</s></code>
+			<code>&lt;a href="#" role="button" class="btn toggle"&gt;Click&lt;/a&gt;</code>
+		</pre>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Roles CSS</h2>
+		<pre>
+			<code>.btn <mark class="next">[role="button]</mark> {</code>
+			<code>	background: green;</code>
+			<code>	...</code>
+			<code>}</code>
+		</pre>
 		</div></section>
 
 	<section class="slide"><div>
@@ -345,7 +429,7 @@
 		</ul>
 		</div></section>
 
-	<section class="slide shout cover high_contrast"><div>
+	<section class="slide shout high_contrast"><div>
 		<h2>High Contrast Mode</h2>
 		
 		</div></section>
@@ -355,18 +439,59 @@
 		</div></section>
 
 	<section class="slide"><div>
-		<h2>зачем нужен High Contrast mode?</h2>
+		<h2>Кому нужен High Contrast mode?</h2>
 		<ul>
-			<li>Улучшает читабельность нашей страницы</li>
-			<li>Убирает весь визуальный шум</li>
+			<li>Слабовидяшим пользователям</li>
+			<li>Пользователям с дальтонизмом</li>
+			<li>Пользователям с чуствительным зрением</li>
 		</ul>
 		</div></section>
 
 	<section class="slide"><div>
-		<h2>High Contrast Mode say</h2>
+		<h2>А что под капотом?</h2>
+		<ul>
+			<li>Изменяется цветовая гамма (text color, borders, etc.)</li>
+			<li>Убираются фоновые цвета и изображения</li>
+			<li>Также увеличиваются размеры шрифтов</li>
+		</ul>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>No background???</h2>
+		<ul>
+			<li class="next"><img src="pictures/contrast_toolbar_v1.png" alt=""></li>
+			<li class="next">Ииии...</li>
+			<li class="next"><img src="pictures/contrast_toolbar_hc.png" alt=""></li>
+		</ul>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Fix it!</h2>
+		<ul>
+			<li>У нас есть:</li>
+			<li class="next">HTML: <code>&lt;button type="button"&gt;Print&lt;/button&gt;</code></li>
+			<li class="next">CSS: <code>background: url(sprite.png);</code></li>
+		</ul>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Fix it!</h2>
+		<pre>
+			<code>button {</code>
+			<code>	overflow: hidden;</code>
+			<code>}</code>
+			<span class="next"><code>button:before {</code>
+			<code>	content: url(sprite.png);</code>
+			<code>	margin: -X 0 0 -Y;</code>
+			<code>}</code></span>
+		</pre>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>High Contrast Mode checklist</h2>
 		<ul class="adv">
-			<li class="no next">Скажем нет background</li>
-			<li class="no next">Скажем нет background-images</li>
+			<li class="no next">background-color</li>
+			<li class="no next">background-image</li>
 			<li class="yes next">Transparent borders</li>
 			<li class="yes next">Transparent Outlines</li
 		</ul>
@@ -384,6 +509,7 @@
 		</ul>
 		</div></section>
 
+<!--
 	<section class="slide"><div>
 		<h2>What we’ve learned</h2>
 		<ul>
@@ -392,6 +518,7 @@
 			<li>You may ﬁnd it hard to stop...</li>
 		</ul>
 		</div></section>
+-->
 		
 		
 	<p class="badge"><a href="https://github.com/shower/shower">Powered by Shower</a></p>
