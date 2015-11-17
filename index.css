@@ -27,6 +27,25 @@
 }
 */
 
+.wcag-read {
+	float: right;
+	position: relative;
+	border:2px solid #111;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.wcag-read:before {
+	position: absolute;
+	top: 3px;
+	left: -70px;
+	display: block;
+	width: 128px;
+	height: 128px;
+	content: '';
+	background: url(pictures/reader_icon.png) no-repeat;
+}
+
 .slide.code_88 code {
 	font-size: 88%;
 }
