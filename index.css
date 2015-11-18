@@ -27,8 +27,13 @@
 }
 */
 
+.wcag-block {
+	position: absolute;
+	right: 10%;
+	bottom: 10%;
+}
+
 .wcag-read {
-	float: right;
 	position: relative;
 	border:2px solid #111;
 	border-radius: 5px;

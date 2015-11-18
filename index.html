@@ -331,7 +331,7 @@
 			<code>	background: url(next.png);</code>
 			<code>}</code>
 		</pre>
-		<div class="wcag-read">Link Next</div>
+		<div class="wcag-block"><div class="wcag-read">Link Next</div></div>
 		</div></section>
 
 	<section class="slide shout"><div>
@@ -355,10 +355,9 @@
 		<ul>
 			<li>Создать новый семантический смысл элементов используя “role-” аттрибуты</li>
 			<li>Once set, they don’t change</li>
-			<li><code>&lt;nav role="navigation"&gt;</code></li>
-			<li><code>&lt;article role="article"&gt;</code></li>
-			<li><code>&lt;div role="tablist"&gt;</code></li>
-			<li><code>&lt;div role="combobox&gt;</code></li>
+			<li><code>&lt;main role="main"&gt;</code></li>
+			<li><code>&lt;li role="list"&gt;</code></li>
+			<li><code>&lt;a role="presentation"&gt;</code></li>
 		</ul>
 		</div></section>
 
@@ -383,6 +382,31 @@
 			<code><s>&lt;span class="btn toggle"&gt;Click&lt;/span&gt;</s></code>
 			<code><s>&lt;a href="#" class="btn toggle"&gt;Click&lt;/a&gt;</s></code>
 			<code>&lt;a href="#" role="button" class="btn toggle"&gt;Click&lt;/a&gt;</code>
+			<div class="wcag-block"><div class="wcag-read">Click Button</div></div>
+		</pre>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Roles HTML</h2>
+		<pre>
+			<code>&lt;table&gt;</code>
+			<code>&lt;thead&gt;</code>
+			<code>...</code>
+			<code>&lt;a href="#"&gt;Info&lt;/a&gt;</code>
+			<code>...&lt;/table&gt;</code>
+			<div class="wcag-block"><div class="wcag-read">table with 2 rows and 1 columns ... Info Link</div></div>
+		</pre>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Roles HTML</h2>
+		<pre>
+			<code>&lt;table role="presentation"&gt;</code>
+			<code>&lt;thead&gt;</code>
+			<code>...</code>
+			<code>&lt;a href="#"&gt;Info&lt;/a&gt;</code>
+			<code>...&lt;/table&gt;</code>
+			<div class="wcag-block"><div class="wcag-read">... Info Link</div></div>
 		</pre>
 		</div></section>
 
@@ -428,6 +452,48 @@
 			<li>Семантически залинкуйте label наконтент или добавьте, если их не было</li>
 			<li>aria-labelledby, aria-label</li>
 		</ul>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Content Relationships</h2>
+		<pre>
+			<code>&lt;label for="choosePassword">Choose Password:&lt;/label></code>
+			<code>&lt;input id="choosePassword"></code>
+			<code>&lt;span class="help">Passwords must be 8 characters&lt;/span></code>
+			<div class="wcag-block"><div class="wcag-read">Choose Password edit protected</div></div>
+		</pre>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Content Relationships</h2>
+		<pre>
+			<code>&lt;label for="choosePassword">Choose Password:&lt;/label></code>
+			<code>&lt;span class="wcag-hidden"><br>   Passwords must be 8 characters long&lt;/span></code>
+			<code>&lt;input id="choosePassword"></code>
+			<code>&lt;span class="help">Passwords must be 8 characters&lt;/span></code>
+			<div class="wcag-block"><div class="wcag-read">Choose Password:Passwords must be 8 characters long</div></div>
+		</pre>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Content Relationships</h2>
+		<pre>
+			<code>&lt;label for="choosePassword">Choose Password:&lt;/label></code>
+			<code>&lt;input id="choosePassword" aria-describedby="choosePasswordHelp"></code>
+			<code>&lt;span class="help" id="choosePasswordHelp">Passwords must be 8 characters long&lt;/span></code>
+			<div class="wcag-block"><div class="wcag-read">Choose Password:Passwords must be 8 characters long</div></div>
+		</pre>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Content Relationships</h2>
+		<pre>
+			<code>&lt;p id="error_choosePassword" class="error">Error&lt;/p></code>
+			<code>&lt;label for="choosePassword">Choose Password:&lt;/label></code>
+			<code>&lt;input id="choosePassword" <br>   aria-describedby="choosePasswordHelp"></code>
+			<code>&lt;span class="help" id="error_choosePassword <br>   choosePasswordHelp">Passwords must be...&lt;/span></code>
+			<div class="wcag-block"><div class="wcag-read">Choose Password:Passwords must be 8 characters long</div></div>
+		</pre>
 		</div></section>
 
 	<section class="slide"><div>
