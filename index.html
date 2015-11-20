@@ -82,6 +82,10 @@
 		</ul>
 		</div></section>
 
+	<section class="slide cover"><div>
+		<img src="pictures/w3c_wcag.png" alt="">
+		</div></section>
+
 	<section class="slide shout"><div>
 		<h2>Сложно!</h2>
 		</div></section>
@@ -122,6 +126,7 @@
 
 	<section class="slide cover shout"><div>
 		<h2>Было?</h2>
+		<h2 class="next" style="margin-top:160px">Ну было же :)</h2>
 		<img src="pictures/jira_issue.png" alt="">
 		</div></section>
 
@@ -174,6 +179,33 @@
 			<li class="next">Fallback для :hover &amp; click <br><span class="next" style="margin-left:40px">:focus &amp; keydown</span></li>
 			<li class="next">Добавьте tabIndex=0 &amp; key events для non-focusable элементов</li>
 			<li class="next">Избегайте keyboard-traps &amp; time-wasting</li>
+		</ul>
+		</div></section>
+
+	<section class="slide"><div>
+		<pre>
+			<code>$(‘a.trap’).keydown(function(event){</code>
+			<code>	event.preventDefault();</code>
+			<code>	var href = $(this).attr(‘href’);</code>
+			<code>	var text = $(this).text();;</code>
+			<code>	window.open(href, text);</code>
+			<code>});</code>
+		</pre>
+		</div></section>
+
+	<section class="slide cover"><div>
+		    <video id="oops" data-scalable="" loop="" autoplay="" onclick="playOrPause();" style="height: 640px;width: 1024px;">
+            <source src="pictures/fail.webm" type="video/webm">
+        </video>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Keyboard-only план</h2>
+		<ul>
+			<li>Очевидные focus состояния <b>(Оставьте outline в покое)</b></li>
+			<li>Fallback для :hover &amp; click <br><span style="margin-left:40px">:focus &amp; keydown</span></li>
+			<li>Добавьте tabIndex=0 &amp; key events для non-focusable элементов</li>
+			<li>Избегайте keyboard-traps &amp; time-wasting</li>
 			<li class="next">HTML вам поможет! И абсолютно бесплатно!</li>
 		</ul>
 		</div></section>
@@ -210,6 +242,29 @@
 				<ul style="font-size:75%">
 					<li><a href="http://mzl.la/1eeYiyf">WCAG Contrast Checker</a></li>
 					<li><a href="http://bit.ly/1eeYZYh">Contrast Checker</a></li>
+					<li><a href="http://bit.ly/1QyZ2GW">Contrast Ratio by Lea Verou</a></li>
+				</ul>
+			</li>
+		</ul>
+		</div></section>
+
+	<section class="slide cover" style="background: #fff;"><div>
+		<img src="pictures/contrast.png" alt="">
+		</div></section>
+
+	<section class="slide cover" style="background: #fff;"><div>
+		<img src="pictures/contrast2.png" alt="">
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Визуальная часть</h2>
+		<ul>
+			<li>
+				Начнем с хороших размеров шрифтов &amp; адекватного контраста
+				<ul style="font-size:75%">
+					<li><a href="http://mzl.la/1eeYiyf">WCAG Contrast Checker</a></li>
+					<li><a href="http://bit.ly/1eeYZYh">Contrast Checker</a></li>
+					<li><a href="http://bit.ly/1QyZ2GW">Contrast Ratio by Lea Verou</a></li>
 				</ul>
 			</li>
 			<li class="next">И не забываем про em/rem. <span class="next">Почему?</span></li>
@@ -228,7 +283,7 @@
 				<ul style="font-size:75%">
 					<li><a href="http://mzl.la/1eeYiyf">WCAG Contrast Checker</a></li>
 					<li><a href="http://bit.ly/1eeYZYh">Contrast Checker</a></li>
-					<li><a href="http://bit.ly/1ljQvFF">NoCoﬀee</a></li>
+					<li><a href="http://bit.ly/1QyZ2GW">Contrast Ratio by Lea Verou</a></li>
 				</ul>
 			</li>
 			<li>И не забываем про em/rem</li>
@@ -253,9 +308,10 @@
 				<ul style="font-size:75%">
 					<li><a href="http://mzl.la/1eeYiyf">WCAG Contrast Checker</a></li>
 					<li><a href="http://bit.ly/1eeYZYh">Contrast Checker</a></li>
-					<li><a href="http://bit.ly/1ljQvFF">NoCoﬀee</a></li>
+					<li><a href="http://bit.ly/1QyZ2GW">Contrast Ratio by Lea Verou</a></li>
 				</ul>
 			</li>
+			<li>И не забываем про em/rem</li>
 			<li>Не полагайтесь только на цвет</li>
 			<li>Добавьте легенду и текстуру или символы</li>
 			<li class="next">Все изображения должны иметь смысловой alt</li>
@@ -280,7 +336,7 @@
 		</div></section>
 
 	<section class="slide shout cover"><div>
-		<h2>Drink Me</h2>
+		<h2>Try Me</h2>
 		<img src="pictures/readers.jpg" alt="">
 		</div></section>
 
@@ -297,23 +353,9 @@
 	<section class="slide"><div>
 		<h2>Screen Reader</h2>
 		<ul>
-			<li>Для навигации и поиска поконтенту используется клавиатура (шорткаты)</li>
+			<li>Для навигации и поиска поконтенту используется клавиатура</li>
+			<li>Сложная и могучая система шорткатов</li>
 			<li>98.6% пользователей screen reader'ов users не выключают JS!</li>
-			<li>???</li>
-		</ul>
-		</div></section>
-
-	<section class="slide shout"><div>
-		<h2>HTML<br>Имеет значение</h2>
-		</div></section>
-
-	<section class="slide"><div>
-		<h2>Headings</h2>
-		<ul>
-			<li>Один из основных способов навигации</li>
-			<li class="next">А ваш контент имеет заголовки?</li>
-			<li class="next">Они достаточно информативны?</li>
-			<li class="next">Они следуют иерархии? (h1 >> h6)</li>
 		</ul>
 		</div></section>
 
@@ -324,7 +366,7 @@
 			<li>display: none;</li>
 			<li>visibility: hidden;</li>
 			<li>:before content, :after content (тип того)</li>
-			<li>Дуржите в голове иконки и иконочные шрифты!</li>
+			<li>Держите в голове иконки и иконочные шрифты!</li>
 		</ul>
 		</div></section>
 
@@ -365,6 +407,20 @@
 		</div></section>
 
 	<section class="slide shout"><div>
+		<h2>HTML<br>Имеет значение</h2>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Headings</h2>
+		<ul>
+			<li>Один из основных способов навигации по контенту</li>
+			<li class="next">А ваш контент имеет заголовки?</li>
+			<li class="next">Они достаточно информативны?</li>
+			<li class="next">Они следуют иерархии? (h1 >> h6)</li>
+		</ul>
+		</div></section>
+
+	<section class="slide shout"><div>
 		<h2 class="shout_h2_big_2lines">За границами банального</h2>
 		<h2 class="shout_h2_small">Должно же быть что-то еще, да?</h2>
 		</div></section>
@@ -372,7 +428,7 @@
 	<section class="slide"><div>
 		<h2>WAI-ARIA</h2>
 		<ul>
-			<li>Семантическая информация и лучшее взаимодействие с<br> Screen Reader'ами</li>
+			<li>Обеспечим семантическую информацию и лучшее взаимодействие<br> со Screen Reader'ами</li>
 			<li>Пишем прямо в HTML</li>
 			<li>Часть спецификации HTML5</li>
 			<li>Roles, states &amp; properties</li>
@@ -383,23 +439,23 @@
 	<section class="slide"><div>
 		<h2>Roles</h2>
 		<ul>
-			<li>Создать новый семантический смысл элементов используя “role-” аттрибуты</li>
-			<li>Once set, they don’t change</li>
+			<li>Мы можем создать новый семантический смысл элементов используя “role-” аттрибуты</li>
+			<li>Установили и забыли. Или поменяли с помощью JS</li>
 			<li><code>&lt;main role="main"&gt;</code></li>
 			<li><code>&lt;li role="list"&gt;</code></li>
-			<li><code>&lt;a role="presentation"&gt;</code></li>
+			<li><code>&lt;table role="presentation"&gt;</code></li>
 		</ul>
 		</div></section>
 
 	<section class="slide"><div>
-		<h2>HTML</h2>
+		<h2>Roles in HTML</h2>
 		<pre>
 			<code>&lt;span class="btn toggle"&gt;Click&lt;/span&gt;</code>
 		</pre>
 		</div></section>
 
 	<section class="slide"><div>
-		<h2>Roles HTML</h2>
+		<h2>Roles in HTML</h2>
 		<pre>
 			<code><s>&lt;span class="btn toggle"&gt;Click&lt;/span&gt;</s></code>
 			<code>&lt;a href="#" class="btn toggle"&gt;Click&lt;/a&gt;</code>
@@ -407,7 +463,7 @@
 		</div></section>
 
 	<section class="slide"><div>
-		<h2>Roles HTML</h2>
+		<h2>Roles in HTML</h2>
 		<pre>
 			<code><s>&lt;span class="btn toggle"&gt;Click&lt;/span&gt;</s></code>
 			<code><s>&lt;a href="#" class="btn toggle"&gt;Click&lt;/a&gt;</s></code>
@@ -417,7 +473,7 @@
 		</div></section>
 
 	<section class="slide"><div>
-		<h2>Roles HTML</h2>
+		<h2>Roles in HTML</h2>
 		<pre>
 			<code>&lt;table&gt;</code>
 			<code>&lt;thead&gt;</code>
@@ -429,7 +485,7 @@
 		</div></section>
 
 	<section class="slide"><div>
-		<h2>Roles HTML</h2>
+		<h2>Roles in HTML</h2>
 		<pre>
 			<code>&lt;table role="presentation"&gt;</code>
 			<code>&lt;thead&gt;</code>
@@ -441,7 +497,7 @@
 		</div></section>
 
 	<section class="slide"><div>
-		<h2>Roles CSS</h2>
+		<h2>Roles in CSS</h2>
 		<pre>
 			<code>.btn <mark class="next">[role="button]</mark> {</code>
 			<code>	background: green;</code>
@@ -469,7 +525,7 @@
 		<ul>
 			<li>Описывают отношения - между контентом и взаимодеййствием с пользователем</li>
 			<li>Updated via JS on UI changes</li>
-			<li>aria-аттрибуты</li>
+			<li>aria-аттрибуты:</li>
 			<li><code>&lt;section aria-labelledby="MainHeading"&gt;</code></li>
 			<li><code>&lt;div aria-expanded="true"&gt;</code></li>
 			<li>и т.д.</li>
@@ -480,7 +536,7 @@
 		<h2>Content Relationships</h2>
 		<ul>
 			<li>Семантически залинкуйте label наконтент или добавьте, если их не было</li>
-			<li>aria-labelledby, aria-label</li>
+			<li>aria-labelledby, aria-label in action</li>
 		</ul>
 		</div></section>
 
@@ -509,8 +565,8 @@
 		<h2>Content Relationships</h2>
 		<pre>
 			<code>&lt;label for="choosePassword">Choose Password:&lt;/label></code>
-			<code>&lt;input id="choosePassword" aria-describedby="choosePasswordHelp"></code>
-			<code>&lt;span class="help" id="choosePasswordHelp">Passwords must be 8 characters long&lt;/span></code>
+			<code>&lt;input id="choosePassword" <br>   aria-describedby="choosePasswordHelp"></code>
+			<code>&lt;span class="help" id="choosePasswordHelp"><br>   Passwords must be 8 characters long&lt;/span></code>
 			<div class="wcag-block"><div class="wcag-read">Choose Password:Passwords must be 8 characters long</div></div>
 		</pre>
 		</div></section>
@@ -518,11 +574,11 @@
 	<section class="slide"><div>
 		<h2>Content Relationships</h2>
 		<pre>
-			<code>&lt;p id="error_choosePassword" class="error">Error&lt;/p></code>
+			<code>&lt;p id="<mark>error_choosePassword</mark>" class="error">Error&lt;/p></code>
 			<code>&lt;label for="choosePassword">Choose Password:&lt;/label></code>
-			<code>&lt;input id="choosePassword" <br>   aria-describedby="choosePasswordHelp"></code>
-			<code>&lt;span class="help" id="error_choosePassword <br>   choosePasswordHelp">Passwords must be...&lt;/span></code>
-			<div class="wcag-block"><div class="wcag-read">Choose Password:Passwords must be 8 characters long</div></div>
+			<code>&lt;input id="choosePassword" aria-describedby=<br>   "<mark>choosePasswordHelp</mark> <mark>error_choosePassword</mark>"></code>
+			<code>&lt;span class="help" id="<mark>choosePasswordHelp</mark>"><br>   Passwords must be 8 characters long&lt;/span></code>
+			<div class="wcag-block"><div class="wcag-read">Choose Password:Passwords must be 8 characters long. Error</div></div>
 		</pre>
 		</div></section>
 
@@ -532,8 +588,8 @@
 			<li>ARIA это связь, а не замена.</li>
 			<li>Используйте простой HTML так, где это возможно</li>
 			<li>Это не магия и не панацея</li>
-			<li>Ответственность за events, focus management, keyboard support и смысл всё еще лежит на вас</li>
-			<li>Есть только один способ быть на 10% уеренным... Потестить</li>
+			<li>Ответственность за events, focus management, keyboard support и <b>смысл</b> всё еще лежит на вас</li>
+			<li>Есть только один способ быть на 10% уверенным... Потестить</li>
 		</ul>
 		</div></section>
 
@@ -598,10 +654,10 @@
 	<section class="slide"><div>
 		<h2>High Contrast Mode checklist</h2>
 		<ul class="adv">
-			<li class="no next">background-color</li>
-			<li class="no next">background-image</li>
-			<li class="yes next">Transparent borders</li>
-			<li class="yes next">Transparent Outlines</li
+			<li class="next">background-color</li>
+			<li class="next">background-image</li>
+			<li class="next">Transparent borders</li>
+			<li class="next">Transparent Outlines</li
 		</ul>
 		</div></section>
 
@@ -617,16 +673,31 @@
 		</ul>
 		</div></section>
 
-<!--
 	<section class="slide"><div>
-		<h2>What we’ve learned</h2>
+		<h2>Про кого же еще мы забыли?</h2>
 		<ul>
-			<li>Bake it in, don’t tack it on</li>
-			<li>Awesome and helpful community</li>
-			<li>You may ﬁnd it hard to stop...</li>
+		    <li>Люди с нарушениями памяти</li>
+			<li>Пожилые люди</li>
+			<li>Опытные пользователи</li>
 		</ul>
 		</div></section>
--->
+
+	<section class="slide shout"><div>
+		<h2>И напоследок</h2>
+		</div></section>
+
+	<section class="slide shout"><div>
+		<h2 style="font-size: 70px; text-align:center; margin-top:-130px;">Волнуетесь об опыте пользовательского взаимодействия <br>и впечатлении пользователя?</h2>
+		<h2 class="next" style="font-size: 80px; text-align:center; margin-top:120px;">Не обходите эту проблему стороной ©</h2>
+		</div></section>
+
+	<section class="slide shout"><div>
+		<h2>Let's make web a better place</h2>
+		</div></section>
+
+	<section class="slide shout"><div>
+		<h2>Вопросы?</h2>
+		</div></section>
 		
 		
 	<p class="badge"><a href="https://github.com/shower/shower">Powered by Shower</a></p>
