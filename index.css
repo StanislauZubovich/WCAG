@@ -20,6 +20,20 @@
 	font-size: 90px;
 }
 
+.slide.shout.shout_description .definition {
+	font-size:100px;
+	top:20%;
+}
+
+.slide.shout.shout_description .description {
+	font-size: 75px;
+	top:45%;
+}
+
+.slide.shout.shout_description .description.sublevel {
+	top:75%;
+}
+
 /*
 .slide.shout .shout_h2_big_2lines + .shout_h2_small {
 	font-size: 30px;
@@ -85,6 +99,10 @@
 }
 
 
+.slide.no_list ul>li:before {
+	content: '';
+}
+
 .slide .adv LI:before {
 	content: '';
 	width: 2em;
@@ -97,4 +115,14 @@
 }
 .slide .adv LI.no:before {
 	background-image: url(../pictures/no.svg);
+}
+
+.slide.links ul {
+	position: absolute;
+	top: 30%;
+}
+.slide.links ul+ul {
+	position: absolute;
+	top: 30%;
+	left:50%;
 }
