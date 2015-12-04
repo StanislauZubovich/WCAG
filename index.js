@@ -14,4 +14,17 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 		return false;
 	};
+	v = document.getElementById('point');
+	console.log(v);
+	v.addEventListener('play', function () {
+		v.play();
+	}, false);
+	v.onclick = function () {
+		if (v.paused) {
+			v.play();
+		} else {
+			v.pause();
+		}
+		return false;
+	};
 }, false);

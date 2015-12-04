@@ -18,18 +18,24 @@
 		<img src="pictures/accessibility.jpg" alt="">
 		</div></section>
 
-	<section class="slide shout"><div>
-		<h2>#A11Y</h2>
+	<section class="slide cover"><div>
+		<video id="point" data-scalable="" loop="" style="height: 640px;width: 1024px;z-index:2">
+			<source src="pictures/point_of_view_fail.mp4" type="video/webm">
+		</video>
 		</div></section>
 
 	<section class="slide shout"><div>
 		<h2>#Д9Ь</h2>
 		</div></section>
 
+	<section class="slide shout"><div>
+		<h2>#A11Y</h2>
+		</div></section>
+
 	<section class="slide"><div>
 		<h2>#A11Y</h2>
 		<ul>
-			<li class="next">Если сайты правильно <b>спроектированы</b>, <b>разработаны</b> и <b>отредактированы</b>, все пользователи имеют <b>равный доступ</b> к информации и функционалу. <small>Wikipedia</small></li> 
+			<li class="next">Если сайты правильно <b>спроектированы</b>, <b>разработаны</b> и <b>отредактированы</b>, все пользователи имеют <b>равный доступ</b> к информации и функционалу. <small>Wikipedia</small></li>
 			<li class="next">Able to be <b>easily</b> obtained or used; easily understood or appreciated. <small>Oxford Dictionary</small></li>
 			<li class="next">Доступность ~ Юзабилити</li>
 			<li class="next">Все пользователи могут в равной мере использовать приложение, и оно должно быть простым в использовании для всех</li>
@@ -623,13 +629,29 @@
 		</div></section>
 
 	<section class="slide"><div>
+		<h2>Динамика</h2>
+		<pre>
+			<code>&lt;div <mark>aria-live="polite"</mark> class="status"> <br>	Content is loading&lt;/div></code>
+			<div class="wcag-block"><div class="wcag-read">...</div></div>
+		</pre>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Динамика</h2>
+		<pre>
+			<code>&lt;div <mark>aria-live="polite"</mark> class="status"> <br>	Content is successfully loaded&lt;/div></code>
+			<div class="wcag-block"><div class="wcag-read">Content is successfully loaded</div></div>
+		</pre>
+		</div></section>
+
+	<section class="slide"><div>
 		<h2>Используйте ARIA аккуратно</h2>
 		<ul>
 			<li>ARIA это улучшение, а не замена.</li>
 			<li>Это не магия и не панацея от всех бед</li>
 			<li>Не изобретайте велосипеды, сначала посмотрите спецификацию</li>
 			<li>Ответственность за события, управление пользователем, доступ с клавиатуры и <b>смысл</b> всё еще лежит на вас</li>
-			<li>Есть только один способ быть на 100% уверенным... <br><span class="next">Посмотреть самому</span></li>
+			<li>Есть только один способ быть на 100% уверенным... <br><span class="next">Потрогать самому</span></li>
 		</ul>
 		</div></section>
 
@@ -681,7 +703,7 @@
 		<pre>
 			<code>button {</code>
 			<code>	overflow: hidden;</code>
-			<code>	outline: 1px solid transparent;</code>
+			<code>	<mark>outline: 1px solid transparent;</mark></code>
 			<code>}</code>
 			<span class="next"><code>button<mark>:before</mark> {</code>
 			<code>	content: url(sprite.png);</code>
@@ -693,11 +715,9 @@
 	<section class="slide"><div>
 		<h2>Режим высокой контрастности. Чеклист</h2>
 		<ul class="adv">
-			<li class="no next">Background-color</li>
-			<li class="no next">Background-image</li>
+			<li class="no next">Background</li>
 			<li class="no next">Colors</li>
-			<li class="yes next">Transparent borders</li>
-            <li class="yes next">Transparent Outlines</li>
+			<li class="yes next">Transparent colors</li>
             <li class="yes next">&lt;img> Images</li>
             <li class="yes next">:before, :after</li>
 		</ul>
