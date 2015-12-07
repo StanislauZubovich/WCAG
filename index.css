@@ -56,13 +56,13 @@
 
 .wcag-read:before {
 	position: absolute;
-	top: 3px;
-	left: -70px;
+	top: 0;
+	left: -85px;
 	display: block;
-	width: 128px;
-	height: 128px;
+	width: 90px;
+	height: 90px;
 	content: '';
-	background: url(pictures/reader_icon.png) no-repeat;
+	background: url(pictures/reader.svg) no-repeat;
 }
 
 .slide.code_88 code {
