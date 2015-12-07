@@ -14,16 +14,16 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 		return false;
 	};
-	v = document.getElementById('point');
+	var v1 = document.getElementById('point');
 	console.log(v);
-	v.addEventListener('play', function () {
+	v1.addEventListener('play', function () {
 		v.play();
 	}, false);
-	v.onclick = function () {
-		if (v.paused) {
-			v.play();
+	v1.onclick = function () {
+		if (v1.paused) {
+			v1.play();
 		} else {
-			v.pause();
+			v1.pause();
 		}
 		return false;
 	};

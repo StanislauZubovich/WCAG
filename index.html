@@ -18,18 +18,18 @@
 		<img src="pictures/accessibility.jpg" alt="">
 		</div></section>
 
-	<section class="slide cover"><div>
-		<video id="point" data-scalable="" loop="" style="height: 640px;width: 1024px;z-index:2">
-			<source src="pictures/point_of_view_fail.mp4" type="video/webm">
-		</video>
+	<section class="slide shout"><div>
+		<h2>#A11Y</h2>
 		</div></section>
 
 	<section class="slide shout"><div>
 		<h2>#Д9Ь</h2>
 		</div></section>
 
-	<section class="slide shout"><div>
-		<h2>#A11Y</h2>
+	<section class="slide cover"><div>
+		<video id="point" data-scalable="" loop="" style="height: 640px;width: 1024px;z-index:2">
+			<source src="pictures/point_of_view_fail.mp4" type="video/webm">
+		</video>
 		</div></section>
 
 	<section class="slide"><div>
@@ -62,7 +62,7 @@
 		</div></section>
 
 	<section class="slide shout"><div>
-		<h2 style="margin-top:-20px">Совершенно другой<br>способ восприятия</h2>
+		<h2 style="margin-top:-20px; font-size:130px;line-height: 120%">Совершенно другой<br>способ восприятия</h2>
 		</div></section>
 
 	<section class="slide cover"><div>
@@ -78,6 +78,10 @@
 			<li>Экраны Брайля</li>
 			<li>Шрифтовые/контрастные настройки</li>
 		</ul>
+		</div></section>
+
+	<section class="slide cover"><div>
+		<img src="pictures/w3c.jpg" alt="">
 		</div></section>
 
 	<section class="slide shout shout_description"><div>
@@ -125,9 +129,13 @@
 		<h2>План такой:</h2>
 		<ul>
 			<li class="next">Наш сайт должнен быть доступен только с клавиатуры</li>
-			<li class="next">Оставьте фолбэк для визуальной информации</li>
 			<li class="next">Формы должны работать идеально</li>
+			<li class="next">Оставьте фолбэк для визуальной информации</li>
 		</ul>
+		</div></section>
+
+	<section class="slide cover shout"><div>
+		<img src="pictures/facets_of_accessibility_touch.png" alt="">
 		</div></section>
 
 	<section class="slide cover shout"><div>
@@ -202,13 +210,14 @@
 		<h2>Доступ с клавиатеры. План:</h2>
 		<ul>
 			<li>Очевидные focus состояния <b>(Оставьте outline в покое)</b></li>
-			<li class="next">Фолбэк для :hover &amp; click <br><span class="next" style="margin-left:40px">:focus &amp; keydown</span></li>
-			<li class="next">Добавьте tabIndex=0 &amp; key events для non-focusable элементов</li>
+			<li class="next">Фолбэк для :hover &amp; click - <span class="next">:focus &amp; keydown</span></li>
+			<li class="next">Добавьте нулевой или отрицательный tabIndex и key events для non-focusable элементов</li>
 			<li class="next">Избегайте клавиатурных ловушек и бесполезной траты времени пользователя</li>
 		</ul>
 		</div></section>
 
 	<section class="slide"><div>
+		<h2>Клавиатурные ловушки</h2>
 		<pre>
 			<code>$(‘a.trap’).keydown(function(event){</code>
 			<code>	<mark>event.preventDefault();</mark></code>
@@ -216,6 +225,17 @@
 			<code>	var text = $(this).text();;</code>
 			<code>	window.open(href, text);</code>
 			<code>});</code>
+		</pre>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Клавиатурные ловушки</h2>
+		<pre>
+			<code>&lt;input type="text" <mark>tabindex="0"</mark>/></code>
+			<code>&lt;input type="password" <mark>tabindex="1"</mark>/></code>
+			<code>&lt;a href="....html" <mark>tabindex="2"</mark>>Forgot Password?&lt;/a></code>
+			<code>&lt;button&gt;Next&lt;/button&gt;</code>
+			<code>&lt;button <mark>tabindex="3"</mark>&gt;Back&lt;/button&gt;</code>
 		</pre>
 		</div></section>
 
@@ -229,8 +249,8 @@
 		<h2>Доступ с клавиатеры. План:</h2>
 		<ul>
 			<li>Очевидные focus состояния <b>(Оставьте outline в покое)</b></li>
-			<li>Фолбэк для :hover &amp; click <br><span style="margin-left:40px">:focus &amp; keydown</span></li>
-			<li>Добавьте tabIndex=0 &amp; key events для non-focusable элементов</li>
+			<li>Фолбэк для :hover &amp; click - <span>:focus &amp; keydown</span></li>
+			<li>Добавьте нулевой или отрицательный tabIndex и key events для non-focusable элементов</li>
 			<li>Избегайте клавиатурных ловушек и бесполезной траты времени пользователя</li>
 			<li class="next">Не изобретайте велосипеды!</li>
 			<li class="next">HTML много чего умеет! И абсолютно бесплатно!</li>
@@ -259,6 +279,23 @@
 			<li><s><code>&lt;a href="#" class="btn"&gt;Click me&lt;/a&gt;</code></s></li>
 			<li class="next"><code>&lt;button class="toggle"&gt;Click me&lt;/ button&gt;</code></li>
 		</ul>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Формы</h2>
+		<ul>
+			<li>Каждое поле должно включать в себя реальный label <br><code>&lt;label for="[INPUT ID]"&gt;</code></li>
+			<li class="next">Внутри может быть вспомогательный текст, предупреждения, ошибки</li>
+			<li class="next">Нам жизненно необходимы адекватные cообщения об ошибках</li>
+		</ul>
+		</div></section>
+
+	<section class="slide cover"><div>
+		<img src="pictures/ebay_form.png" alt="">
+		</div></section>
+
+	<section class="slide cover shout"><div>
+		<img src="pictures/facets_of_accessibility_see.png" alt="">
 		</div></section>
 
 	<section class="slide"><div>
@@ -354,17 +391,8 @@
 		<h2 class="next" style="top:70%; font-size:100px">И не дело не только в этом</h2>
 		</div></section>
 
-	<section class="slide"><div>
-		<h2>Формы</h2>
-		<ul>
-			<li>Каждое поле должно включать в себя реальный label <br><code>&lt;label for="[INPUT ID]"&gt;</code></li>
-			<li class="next">Внутри может быть вспомогательный текст, предупреждения, ошибки</li>
-			<li class="next">Нам жизненно необходимы адекватные cообщения об ошибках</li>
-		</ul>
-		</div></section>
-
-	<section class="slide cover"><div>
-		<img src="pictures/ebay_form.png" alt="">
+	<section class="slide cover shout"><div>
+		<img src="pictures/facets_of_accessibility_listen.png" alt="">
 		</div></section>
 
 	<section class="slide shout"><div>
@@ -399,10 +427,22 @@
 		<h2>Скрин-ридеры игнорируют</h2>
 		<ul>
 			<li>img с пустыми alt аттрибутами alt=""</li>
+		</ul>
+		</div></section>
+
+	<section class="slide cover"><div>
+		<img src="pictures/image_alt.png" alt="">
+		<div class="wcag-block"><div class="wcag-read">This is super image</div></div>
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>Скрин-ридеры игнорируют</h2>
+		<ul>
+			<li>img с пустыми alt аттрибутами alt=""</li>
 			<li>display: none;</li>
 			<li>visibility: hidden;</li>
-			<li>:before content, :after content (тип того)</li>
-			<li>Держите в голове иконки и иконочные шрифты!</li>
+			<li>:before и :after content (Скрин-ридеры читают не все символы)</li>
+			<li>Потому держите в голове иконки и иконочные шрифты!</li>
 		</ul>
 		</div></section>
 
@@ -462,6 +502,10 @@
 	<section class="slide shout"><div>
 		<h2 class="shout_h2_big_2lines">За границами банального</h2>
 		<h2 class="shout_h2_small">Должно же быть что-то еще, да?</h2>
+		</div></section>
+
+	<section class="slide cover"><div>
+		<img src="pictures/w3c.jpg" alt="">
 		</div></section>
 
 	<section class="slide shout shout_description"><div>
@@ -653,6 +697,10 @@
 			<li>Ответственность за события, управление пользователем, доступ с клавиатуры и <b>смысл</b> всё еще лежит на вас</li>
 			<li>Есть только один способ быть на 100% уверенным... <br><span class="next">Потрогать самому</span></li>
 		</ul>
+		</div></section>
+
+	<section class="slide cover shout"><div>
+		<img src="pictures/facets_of_accessibility_see.png" alt="">
 		</div></section>
 
 	<section class="slide shout high_contrast"><div>
