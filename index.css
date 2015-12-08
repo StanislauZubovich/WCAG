@@ -30,6 +30,11 @@
 	top:45%;
 }
 
+.slide.shout.shout_description .description:only-child {
+	font-size: 75px;
+	top:60%;
+}
+
 .slide.shout.shout_description .description.sublevel {
 	top:75%;
 }
